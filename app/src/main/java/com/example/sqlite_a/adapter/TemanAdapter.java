@@ -56,8 +56,16 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
         public TemanViewHolder(View view) {
             super(view);
             cardku = (CardView)view.findViewById(R.id.kartuku);
-                    namaTxt = (TextView) view.findViewById(R.id.textNama);
-                    telponTxt = (TextView) view.findViewById(R.id.textTelpon);
+            namaTxt = (TextView) view.findViewById(R.id.textNama);
+            telponTxt = (TextView) view.findViewById(R.id.textTelpon);
+
+            cardku.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+
+                    return true;
+                }
+            });
         }
     }
 }
